@@ -1,0 +1,27 @@
+.nav-list {
+  display: flex;
+  gap: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.nav-item > span {
+  position: relative;
+  cursor: pointer;
+}
+
+.nav-item > span::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 0;
+  width: 0;
+  height: 3px;
+  border-radius: 100vmax;
+  background-color: #fff;
+  transition: width 300ms ease-in;
+}
+
+.nav-item > span:hover::after {
+  width: 100%;
+}

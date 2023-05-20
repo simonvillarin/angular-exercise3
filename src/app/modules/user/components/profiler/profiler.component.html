@@ -1,0 +1,26 @@
+<div class="container">
+  <form (ngSubmit)="handleSubmit($event)">
+    <mat-form-field appearance="outline">
+      <mat-label>Email</mat-label>
+      <input matInput [(ngModel)]="email" name="email" required />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Name</mat-label>
+      <input matInput [(ngModel)]="name" name="name" required />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Bio</mat-label>
+      <textarea matInput [(ngModel)]="bio" name="bio" required></textarea>
+    </mat-form-field>
+    <mat-radio-group
+      aria-label="Select an option"
+      [(ngModel)]="isActive"
+      name="isActive"
+      required
+    >
+      <mat-radio-button value="true">Active</mat-radio-button>
+      <mat-radio-button value="false">Not Active</mat-radio-button>
+    </mat-radio-group>
+    <button mat-raised-button class="submit" type="submit">Submit</button>
+  </form>
+</div>

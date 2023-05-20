@@ -1,0 +1,8 @@
+<div class="container">
+  <div *ngFor="let book of books">
+    <app-book-item
+      [book]="book"
+      (actionEmitter)="getId($event)"
+    ></app-book-item>
+  </div>
+</div>
